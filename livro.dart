@@ -8,15 +8,18 @@ Livro livro = Livro("Como evitar as preocupações e começar a viver", "Carnegi
 livro.abrirLivro(300);
 livro.trocarPagina(310);
 livro.retroceder(309, 310);
-
 print(livro.infoLivro());
+ 
 }
 class Livro{
   String titulo;
   String autor;
   int paginas;
 
-  Livro(this.titulo,this.autor,this.paginas);
+  Livro(
+   this.titulo,
+   this.autor,
+   this.paginas);
 
 String infoLivro(){
   return "Titulo: $titulo\nAutor: $autor\nPáginas: $paginas";
