@@ -3,9 +3,9 @@
 //Adicione um método para verificar se é um triângulo equilátero, isósceles ou escaleno.
  
 void main(){
-Triangulo triangulos = Triangulo(1, 1, 1);
+Triangulo triangulos = Triangulo(2, 3, 1);
 
-print(triangulos.calcularArea(2, 3));
+print(triangulos.calcularArea());
 print(triangulos.calcularPerimetro(6, 6, 6));
 print(triangulos.verificarTriangulo(6, 6, 6));
 
@@ -20,7 +20,7 @@ class Triangulo{
 String valoresTriangulo(){
   return "Base: $base\nAltura: $altura\nLados: $lados ";
 }
-double calcularArea(double base, double altura){
+double calcularArea(){
   double areaTriangulo = (base * altura) / 2;
   return areaTriangulo;
 }
