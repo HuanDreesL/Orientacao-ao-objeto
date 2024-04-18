@@ -20,7 +20,10 @@ class Pessoa{
   int idade;
   double altura;
 
-  Pessoa(this.nome,this.idade,this.altura);
+  Pessoa(
+   this.nome,
+   this.idade,
+   this.altura);
 
 String dadosPessoa(){
     return "Nome: $nome\nIdade: $idade\nAltura: $altura";
