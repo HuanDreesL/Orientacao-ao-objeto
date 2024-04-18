@@ -1,6 +1,3 @@
-//exercicio 7 funcionario -  o metodo aumentoSalarial,
-// o salário deve receber o salario com o valor de aumento
-
 // Desenvolva uma classe `Funcionário` com os atributos nome, cargo e salário.
 // Implemente métodos para calcular aumento de salário e exibir as informações do funcionário.
 
