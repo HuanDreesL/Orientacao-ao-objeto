@@ -5,6 +5,7 @@ Animal animal = Animal("Lobo Cinzento", "Canis lupus", 10);
 
 print(animal.infoAnimal());
 print(animal.somAnimal());
+  
 }
 
 class Animal{
