@@ -15,7 +15,9 @@ class ContaBancaria{
   double saldo;
   int numeroConta;
 
-  ContaBancaria(this.saldo,this.numeroConta);
+  ContaBancaria(
+    this.saldo,
+    this.numeroConta);
 
 String dadosConta(){
   return "Saldo: $saldo\nNumero da Conta: $numeroConta";
