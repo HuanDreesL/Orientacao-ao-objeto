@@ -6,6 +6,7 @@ Funcionario colaborador = Funcionario('Huandres', 'Desenvolvedor', 500);
 
 print(colaborador.infoFuncionario());
 print(colaborador.aumentoSalarial(0.5));
+  
 }
 
 class Funcionario{
