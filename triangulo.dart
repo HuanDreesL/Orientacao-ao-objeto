@@ -3,11 +3,11 @@
 //Adicione um método para verificar se é um triângulo equilátero, isósceles ou escaleno.
  
 void main(){
-Triangulo triangulos = Triangulo(2, 3, 1);
+Triangulo triangulos = Triangulo(3, 3, 3);
 
 print(triangulos.calcularArea());
-print(triangulos.calcularPerimetro(6, 6, 6));
-print(triangulos.verificarTriangulo(6, 6, 6));
+print(triangulos.calcularPerimetro());
+print(triangulos.verificarTriangulo());
 
 }
 class Triangulo{
@@ -15,33 +15,31 @@ class Triangulo{
   double altura;
   int lados;
 
-  Triangulo(this.base,this.altura,this.lados);
+  Triangulo(
+   this.base,
+   this.altura,
+   this.lados);
 
-String valoresTriangulo(){
-  return "Base: $base\nAltura: $altura\nLados: $lados ";
-}
 double calcularArea(){
   double areaTriangulo = (base * altura) / 2;
   return areaTriangulo;
 }
-int calcularPerimetro(int lado1, int lado2, int lado3){
-  int perimetro = lado1 + lado2 + lado3;
+int calcularPerimetro(){
+  int perimetro = lados + lados + lados;
   return perimetro;
 }
-verificarTriangulo(int lado1, int lado2, int lado3){
-  if(lado1 == lado2 && lado1 == lado3 && lado2 == lado3){
+verificarTriangulo(){
+  if(base == lados){
   
    return "Equilatero";
 
   }
-  else if(lado1 != lado2 && lado1 != lado3 && lado2 != lado3){
+  else if(base != lados){
   
   return "Isósceles";
   
   }
-  else if(lado1 == lado2 && lado1 != lado3 
-          || lado1 == lado3 && lado1 != lado2 
-          || lado2 == lado3 && lado2 != lado1){
+  else if(base != lados && lados != lados){
   
   return "Escaleno";
   }
