@@ -13,7 +13,10 @@ class Animal{
   String especie;
   int idade;
 
-  Animal(this.nome,this.especie,this.idade);
+  Animal(
+    this.nome,
+    this.especie,
+    this.idade);
 
 String infoAnimal(){
   return "Nome: $nome\nEspécie: $especie\nIdade: $idade ";
