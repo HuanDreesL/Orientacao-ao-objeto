@@ -1,18 +1,18 @@
 void main(){
- final pessoa = Pessoa("teste", 12, 1.2);
+Pessoa pessoa = Pessoa("teste", 12, 1.2);
 
- print(pessoa.obterNome);
- print(pessoa.obterIdade);
- print(pessoa.obterAltura);
+print(pessoa.nome);
+print(pessoa.idade);
+print(pessoa.altura);
 
- pessoa.atualizarNome("Luiz");
- pessoa.atualizarIdade(23);
- pessoa.atualizarAltura(1.75);
- print("Atualizado");
- print(pessoa.nome);
- print(pessoa.altura);
- print(pessoa.idade);
- 
+pessoa.atualizarNome("Luiz");
+pessoa.atualizarIdade(23);
+pessoa.atualizarAltura(1.75);
+
+print(pessoa.obterNome);
+print(pessoa.obterIdade);
+print(pessoa.obterAltura);
+
 }
 class Pessoa{
   
@@ -40,13 +40,13 @@ void atualizarAltura(double novaAltura){
 }
 
 String get obterNome{
-  return nome = "Huandres";
+  return nome;
 }
 int get obterIdade{
-  return idade = 18;
+  return idade;
 }
 double get obterAltura{
-  return altura = 1.83;
+  return altura;
 }
 
 }
