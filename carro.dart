@@ -3,7 +3,7 @@
 // - Adicione um método para exibir as informações do carro.
 
 void main(){
-Veiculo carro = Veiculo("Gol Quadrado", 1994, "Prata");
+Carro carro = Carro("Gol Quadrado", 1994, "Prata");
 
 print(carro.acelerarCarro('w'));
 print(carro.frearCarro('s'));
@@ -11,12 +11,12 @@ print(carro.virarCarro('a'));
 print(carro.infoCarro());
 
 }
-class Veiculo{
+class Carro{
   String modelo;
   int ano;
   String cor;
 
-  Veiculo(
+  Carro(
     this.modelo,
     this.ano,
     this.cor);
