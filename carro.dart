@@ -9,13 +9,17 @@ print(carro.acelerarCarro('w'));
 print(carro.frearCarro('s'));
 print(carro.virarCarro('a'));
 print(carro.infoCarro());
+
 }
 class Veiculo{
   String modelo;
   int ano;
   String cor;
 
-  Veiculo(this.modelo,this.ano,this.cor);
+  Veiculo(
+    this.modelo,
+    this.ano,
+    this.cor);
 
 String infoCarro(){
   return "Modelo: $modelo\nCor: $cor\nAno: $ano";
