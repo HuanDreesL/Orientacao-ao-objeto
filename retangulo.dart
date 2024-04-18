@@ -12,7 +12,9 @@ class Retangulo{
   double comprimento;
   double largura;
 
-  Retangulo(this.comprimento,this.largura);
+  Retangulo(
+    this.comprimento,
+    this.largura);
 
 double carcularArea(){
   double area = comprimento * largura;
