@@ -1,3 +1,6 @@
+//exercicio 7 funcionario -  o metodo aumentoSalarial,
+// o salário deve receber o salario com o valor de aumento
+
 // Desenvolva uma classe `Funcionário` com os atributos nome, cargo e salário.
 // Implemente métodos para calcular aumento de salário e exibir as informações do funcionário.
 
@@ -14,14 +17,17 @@ class Funcionario{
   String cargo;
   double salario;
 
-  Funcionario(this.nome,this.cargo,this.salario);
+  Funcionario(
+    this.nome,
+    this.cargo,
+    this.salario);
 
 String infoFuncionario(){
   return "Nome: $nome\nCargo: $cargo\nSalário: $salario";
 }
 String aumentoSalarial(double aumento){
   double salarioAumento = salario * aumento;
-  salarioAumento = salarioAumento + salario;
-  return "Novo salario com $aumento% de aumento fica: $salarioAumento";
+  salario = salarioAumento + salario;
+  return "Seu salário aumentou $salarioAumento e ficará $salario";
 }
 }
