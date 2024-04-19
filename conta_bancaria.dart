@@ -1,12 +1,10 @@
 void main(){
-ContaBancaria conta = ContaBancaria(1000, 176);
+ContaBancaria conta = ContaBancaria(5000, 176);
 
 print(conta.dadosConta());
-print(conta.sacarDinheiro(400));
-print(conta.verificarSaldo);
-print(conta.depositarDinheiro(20));
-print(conta.verificarSaldo);
-print(conta.transDinheiro(50));
+conta.sacarDinheiro(500);
+conta.depositarDinheiro(100);
+conta.transDinheiro(1200, 156);
 print(conta.dadosConta());
 
 }
@@ -22,23 +20,33 @@ class ContaBancaria{
 String dadosConta(){
   return "Saldo: $saldo\nNumero da Conta: $numeroConta";
 }
-get verificarSaldo{
+double get verificarSaldo{
   return saldo;
 }
-double depositarDinheiro(double depositar){
-  saldo = depositar + saldo;
-  return depositar;
+
+
+void setNumeroConta(int numeroConta){
+  this.numeroConta = numeroConta;
 }
-double sacarDinheiro(double sacar){
-  saldo = saldo - sacar;
-  return sacar;
+
+void depositarDinheiro(double depositar){
+  saldo += depositar;
+  print("Você depositou $depositar na sua conta");
 }
-double transDinheiro(double transferencia){
-  if(saldo > 0){
-    saldo = saldo - transferencia;
+void sacarDinheiro(double sacar){
+  if(saldo >= sacar){
+    saldo -= sacar;
+    print("Você sacou $sacar");
   }else{
-    print("Sem saldo!");
+    print("Saldo Insuficiente para sacar!");
   }
-  return transferencia;
+}
+void transDinheiro(double transferencia, int numeroConta){
+  if(saldo > transferencia){
+    saldo -= transferencia;
+    print("Você transferiu $transferencia para a conta $numeroConta");
+  }else{
+    print("Sem saldo para transferência!");
+  }
 }
 }
